@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
 app.get('/api/hello', function (req, res) {
   res.json({ greeting: 'hello API' });
 });
-app.use('api/whoami', function(req, res){
+app.use('/api/whoami', function(req, res){
 res.json({ipaddress: req.header('x-forwarded-for'), language: req.header('accept-language'), software: req.header('user-agent')})
 });
 
